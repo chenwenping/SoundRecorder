@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/popup_txt"
+        android:layout_marginBottom="5dp"
+        tools:context=".PopUp" />
+    
+    <Button
+        android:id="@+id/recordYES"	
+        android:text="@string/yes"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        tools:context=".PopUp" />
+
+    <Button
+        android:id="@+id/recordNO"
+        android:text="@string/no"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        tools:context=".PopUp" />
+
+</LinearLayout>

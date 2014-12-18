@@ -1,0 +1,60 @@
+<resources>
+
+    <string name="app_name">SoundRecorder</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_recorder_menu">RecorderMenu</string>
+    <string name="record_button_text">Microphone Recorder</string>
+    <string name="application_image_description">Application image</string>
+    <string name="manager_button_text">File Manager</string>
+    <string name="converter_button_text">File Converter</string>
+    <string name="application_version">Version Beta 1.01</string>
+    <string name="title_activity_record_view">RecordView</string>
+    <string name="sound_player_button_text">Sound Player</string>
+    <string name="background_color">#000000</string>
+    <string name="micro_image">Image of a microphone</string>
+    <string name="back_image">back</string>
+    <string name="time">00:00:00</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="popup_txt">Do you want to record call ?</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_file_manager_view">FileManagerView</string>
+    <string name="title_activity_settings_view">SettingsView</string>
+
+    <string-array name="formats_arrays">
+        <item>3GP</item>
+        <item>MP4</item>
+        <item>AMR</item>
+    </string-array>
+
+    <string-array name="formatvalues_arrays">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    
+    <string-array name="bitratesname_arrays">
+        <item>64 kbps</item>
+        <item>128 kbps</item>
+        <item>256 kbps</item>
+    </string-array>
+    <string-array name="bitratesvalues_arrays">
+        <item>64000</item>
+        <item>128000</item>
+        <item>256000</item>
+    </string-array>
+    <string-array name="AutoRecordValueAray">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="AutoRecordNameAray">
+        <item>Autorecording call</item>
+        <item>Notification ask for record</item>
+        <item>Disabled Autorecord</item>
+    </string-array>
+
+    <string name="title_activity_sound_player_view">SoundPlayerView</string>
+    <string name="title_activity_pop_up">PopUp</string>
+
+</resources>

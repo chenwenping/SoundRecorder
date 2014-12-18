@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+        <PreferenceCategory
+                android:title="General settings">
+                <ListPreference
+                        android:title="Autorecord call"
+                        android:summary="Choose autorecord type"
+                        android:key="listAutorecord"
+                        android:defaultValue="3"
+                        android:entries="@array/AutoRecordNameAray"
+                        android:entryValues="@array/AutoRecordValueAray" />
+			
+               	<EditTextPreference
+               			android:name="SoundPrefix"
+		                android:summary="Choose song prefix."
+		                android:defaultValue="Record_"
+		                android:title="Choose Prefix"
+		                android:key="editPrefix" />               	               	
+               </PreferenceCategory>
+    
+    			<PreferenceCategory
+                android:title="Encoder Settings">
+                <CheckBoxPreference
+                        android:title="Stereo"
+                        android:defaultValue="true"
+                        android:summary="Use stereo for recording ?"
+                        android:key="checkboxStereo" />
+                <ListPreference
+                        android:title="Encoder Format"
+                        android:summary="Choose format for the recording sound."
+                        android:key="listFormats"
+                        android:defaultValue="1"
+                        android:entries="@array/formats_arrays"
+                        android:entryValues="@array/formatvalues_arrays" />
+                 <ListPreference
+                        android:title="Bitrates values"
+                        android:summary="Choose bitrates for the recorded sound."
+                        android:key="listBitrates"
+                        android:defaultValue="64000"
+                        android:entries="@array/bitratesname_arrays"
+                        android:entryValues="@array/bitratesvalues_arrays" />
+                
+               </PreferenceCategory>
+               
+</PreferenceScreen>
