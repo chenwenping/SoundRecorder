@@ -4,6 +4,7 @@ import com.soundrecorder.R;
 import com.soundrecorder.libraries.AudioManager;
 import com.soundrecorder.libraries.FileManager;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -11,12 +12,14 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class SoundPlayerView extends Activity {
 	private ImageButton back, prevButton, nextButton, playButton;
-	private TextView	songTitle, curTime, totalTime;
-	
+	private TextView	songTitle, curTime, totalTime, noSong;
+	private LinearLayout song_ll;
+
 	private FileManager	fileManager;
 	private AudioManager audioManager = new AudioManager();
 	private boolean toFileManager = false;
@@ -173,11 +176,13 @@ public class SoundPlayerView extends Activity {
         nextButton.setOnClickListener(clickListenerNext);
         playButton = (ImageButton) findViewById(R.id.play_pause_btn);
         playButton.setOnClickListener(clickListenerPlay);
-        
+
+        song_ll = (LinearLayout) findViewById(R.id.song_ll);
         songTitle = (TextView) findViewById(R.id.song_title);
         curTime = (TextView) findViewById(R.id.cur_time);
         totalTime = (TextView) findViewById(R.id.total_time);
-        
+        noSong = (TextView) findViewById(R.id.no_song);
+
         Bundle extras = getIntent().getExtras();
         if (extras != null)
 			curSong = extras.getInt("songId");
@@ -185,13 +190,22 @@ public class SoundPlayerView extends Activity {
         	curSong = 0;
         fileManager = new FileManager(this.getApplicationContext());
         fileList = fileManager.getContentDir();
-        songTitle.setText(fileList[curSong]);
-        audioManager.loadSong(fileManager.getRootFolder() + '/' + fileList[curSong]);
-        totalTime.setText(getDuration());
-        if (extras != null)
+        if (fileList.length == 0)
         {
-        	toFileManager = true;
-        	playSong();
+            noSong.setVisibility(View.VISIBLE);
+            song_ll.setVisibility(View.GONE);
+            noSong.setText("No sound recorded");
+        } else {
+            noSong.setVisibility(View.GONE);
+            song_ll.setVisibility(View.VISIBLE);
+            songTitle.setText(fileList[curSong]);
+            audioManager.loadSong(fileManager.getRootFolder() + '/' + fileList[curSong]);
+            totalTime.setText(getDuration());
+            if (extras != null)
+            {
+                toFileManager = true;
+                playSong();
+            }
         }
     }
 
