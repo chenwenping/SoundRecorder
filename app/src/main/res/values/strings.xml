@@ -3,7 +3,7 @@
     <string name="app_name">SoundRecorder</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_recorder_menu">RecorderMenu</string>
-    <string name="record_button_text">Microphone Recorder</string>
+    <string name="record_button_text">Sound Recorder</string>
     <string name="application_image_description">Application image</string>
     <string name="manager_button_text">File Manager</string>
     <string name="converter_button_text">File Converter</string>

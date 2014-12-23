@@ -48,13 +48,4 @@
         android:gravity="center"
         android:text="@string/sound_player_button_text" />
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_gravity="end"
-        android:textColor="#FEFEFE"
-        android:gravity="bottom|center"
-        android:layout_margin="5dp"
-        android:text="@string/application_version" />
-
 </LinearLayout>
