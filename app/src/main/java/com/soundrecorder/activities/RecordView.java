@@ -11,6 +11,7 @@ import com.soundrecorder.libraries.Settings;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -150,7 +151,15 @@ public class RecordView extends Activity {
 		min = 0;
 		hour = 0;
     }
-    
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(audioManager.isRecording()){
+            audioManager.stopRecording();
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_recorder_menu, menu);
